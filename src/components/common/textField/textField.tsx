@@ -1,4 +1,3 @@
-//@ts-nocheck
 'use client';
 import React, { FC } from 'react';
 import { TextFieldProps } from '@/components/common/textField/textField.props';
@@ -19,21 +18,19 @@ const InputField: FC<TextFieldProps> = ({
     };
 
     return (
-        <>
-            <div className={classes.textField}>
-                {label && <label htmlFor="input">{label}</label>}
-                <input
-                    name={name}
-                    type={type}
-                    placeholder={placeholder}
-                    id={id}
-                    value={value}
-                    onChange={handleChange}
-                    autoComplete="off"
-                    {...props}
-                />
-            </div>
-        </>
+        <div className={classes.textField}>
+            {label && <label htmlFor="input">{label}</label>}
+            <input
+                name={name}
+                type={type}
+                placeholder={placeholder}
+                id={id}
+                value={value}
+                onChange={handleChange}
+                autoComplete="off"
+                {...props}
+            />
+        </div>
     );
 };
 

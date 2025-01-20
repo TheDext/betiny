@@ -1,0 +1,14 @@
+.socials {
+  display: flex;
+  column-gap: 30px;
+
+  img {
+    transition: all 0.3s ease 0s;
+    @media (pointer: fine) {
+      &:hover {
+        transform: translate(0, -3px);
+      }
+    }
+
+  }
+}

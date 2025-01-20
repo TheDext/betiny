@@ -1,0 +1,27 @@
+.catalogButton {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  cursor: pointer;
+
+  &__btn {
+    width: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 8px;
+
+    span,
+    &:before,
+    &:after {
+      content: "";
+      display: block;
+      height: 2px;
+      background: #000;
+    }
+  }
+
+  &__text {
+    font-size: 20px;
+  }
+}

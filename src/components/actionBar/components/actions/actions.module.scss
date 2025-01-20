@@ -1,0 +1,23 @@
+.actions {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+
+  &__divider {
+    display: block;
+    height: calc(100% - 10px);
+    width: 2px;
+    background: #000;
+  }
+  
+  img {
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+
+    @media (pointer: fine) {
+      &:hover {
+        transform: translate(0, -3px);
+      }
+    }
+  }
+}

@@ -6,5 +6,6 @@ export interface TextFieldProps {
     name: string;
     disabled?: boolean;
     error?: string;
+    id?: string;
     onChange: (value: string) => void;
 }

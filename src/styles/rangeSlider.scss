@@ -1,0 +1,20 @@
+@use "veriables/global";
+
+.rc-slider-track, .rc-slider-tracks {
+  background-color: global.$orange !important;
+}
+.rc-slider-handle {
+  border: solid 2px global.$orange !important;
+  background: global.$orange !important;
+  opacity: 1 !important;
+  &-dragging {
+    box-shadow: none !important;
+  }
+}
+.rc-slider-handle,
+.rc-slider-track{
+  transition: all 0.3s ease 0s;
+}
+.rc-slider-handle:focus-visible {
+  box-shadow: none !important;
+}

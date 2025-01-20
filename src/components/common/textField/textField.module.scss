@@ -1,6 +1,7 @@
 .textField {
   position: relative;
   background: transparent;
+  height: 100%;
 
   input {
     position: absolute;
@@ -8,7 +9,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    padding: 10px;
+    padding: 10px 20px;
     background: transparent;
   }
 }

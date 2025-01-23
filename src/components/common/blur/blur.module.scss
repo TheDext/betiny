@@ -1,0 +1,19 @@
+.blur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  pointer-events: none;
+
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(2px);
+}
+
+@supports not (backdrop-filter: blur(10px)) {
+  .blur {
+    backdrop-filter: none;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+}

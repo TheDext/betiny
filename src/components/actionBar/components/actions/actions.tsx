@@ -3,8 +3,9 @@ import userIcon from '@/assets/icons/user.svg';
 import favoriteIcon from '@/assets/icons/favorite.svg';
 import cartIcon from '@/assets/icons/cart.svg';
 import Image from 'next/image';
+import { FC } from 'react';
 
-export const Actions = () => {
+export const Actions: FC = () => {
     return (
         <div className={classes.actions}>
             <div className={classes.actions__user}>

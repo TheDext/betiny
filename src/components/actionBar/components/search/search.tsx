@@ -1,25 +1,22 @@
+//@ts-nocheck
 'use client';
 
+import { SearchInput } from '@/components/actionBar/components/searchInput';
+import { SearchResult } from '@/components/actionBar/components/searchResult';
 import classes from './search.module.scss';
-import TextField from '@/components/common/textField/textField';
-import { useState } from 'react';
-import Image from 'next/image';
-import searchIcon from '@/assets/icons/search.svg';
+import { useRef } from 'react';
+import { useClickAway } from 'react-use';
+import useUiActions from '@/store/uiActions';
 
 export const Search = () => {
-    const [searchRequest, setSearchRequest] = useState('');
+    const { setBlured } = useUiActions();
+    const ref = useRef();
+    useClickAway(ref, () => setBlured(false));
 
     return (
-        <div className={classes.search}>
-            <TextField
-                placeholder="Поиск..."
-                value={searchRequest}
-                name="search"
-                onChange={setSearchRequest}
-            />
-            <div className={classes.search__icon}>
-                <Image width={30} src={searchIcon} alt="searchIcon" />
-            </div>
+        <div ref={ref} className={classes.search}>
+            <SearchInput />
+            <SearchResult />
         </div>
     );
 };

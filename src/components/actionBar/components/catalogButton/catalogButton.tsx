@@ -1,11 +1,12 @@
-//@ts-nocheck
-'use client';
 import classes from './catalogButton.module.scss';
+import useUiActions from '@/store/uiActions';
+import { FC } from 'react';
 
-const CatalogButton = () => {
+const CatalogButton: FC = () => {
+    const { isOpenCatalog, setOpenCatalog } = useUiActions();
     return (
         <div
-            onClick={() => console.log('click')}
+            onClick={() => setOpenCatalog(!isOpenCatalog)}
             className={classes.catalogButton}
         >
             <div className={classes.catalogButton__btn}>

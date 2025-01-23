@@ -5,9 +5,9 @@
 
   &__divider {
     display: block;
-    height: calc(100% - 10px);
+    height: 25px;
     width: 2px;
-    background: #000;
+    background: rgba(0, 0, 0, 0.41);
   }
   
   img {

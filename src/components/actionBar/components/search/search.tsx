@@ -7,16 +7,25 @@ import classes from './search.module.scss';
 import { useRef } from 'react';
 import { useClickAway } from 'react-use';
 import useUiActions from '@/store/uiActions';
+import classNames from '@/shared/lib/classNames';
 
 export const Search = () => {
-    const { setBlured } = useUiActions();
+    const { isSearchActive, setSearchActive } = useUiActions();
     const ref = useRef();
-    useClickAway(ref, () => setBlured(false));
+
+    useClickAway(ref, () => setSearchActive(false));
 
     return (
-        <div ref={ref} className={classes.search}>
+        <div
+            ref={ref}
+            className={classNames(
+                classes.search,
+                { [classes._active]: isSearchActive },
+                []
+            )}
+        >
             <SearchInput />
-            <SearchResult />
+            {isSearchActive && <SearchResult />}
         </div>
     );
 };

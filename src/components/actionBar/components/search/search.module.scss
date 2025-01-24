@@ -1,5 +1,8 @@
 .search {
   position: relative;
   width: 100%;
-  z-index: 3;
+}
+
+._active {
+  z-index: 4;
 }

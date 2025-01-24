@@ -1,5 +1,3 @@
-'use client';
-
 import classes from './searchInput.module.scss';
 import TextField from '@/components/common/textField/textField';
 import { useState } from 'react';
@@ -9,10 +7,13 @@ import useUiActions from '@/store/uiActions';
 
 export const SearchInput = () => {
     const [searchRequest, setSearchRequest] = useState('');
-    const { setBlured } = useUiActions();
+    const { setSearchActive } = useUiActions();
 
     return (
-        <div className={classes.searchInput} onClick={() => setBlured(true)}>
+        <div
+            className={classes.searchInput}
+            onClick={() => setSearchActive(true)}
+        >
             <TextField
                 placeholder="Поиск..."
                 value={searchRequest}

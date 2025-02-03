@@ -1,0 +1,19 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Catalog {
+  id       Int       @id @default(autoincrement())
+  name     String
+  seo      String
+  slug     String
+  svg      String
+  parentId Int?
+  parent   Catalog?  @relation("CatalogToCatalog", fields: [parentId], references: [id])
+  children Catalog[] @relation("CatalogToCatalog")
+}

@@ -10,7 +10,6 @@ export default function classNames(
         ...additional,
         ...Object.entries(mods)
             .filter(([key, value]) => {
-                console.log(key);
                 return Boolean(value);
             })
             .map(([classNames]) => classNames),

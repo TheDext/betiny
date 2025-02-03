@@ -1,3 +1,4 @@
+'use client';
 import classes from './catalogButton.module.scss';
 import useUiActions from '@/store/uiActions';
 import { FC } from 'react';

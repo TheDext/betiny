@@ -169,4 +169,32 @@ export const catalog: Catalog[] = [
             },
         ],
     },
+    {
+        name: 'Девочкам',
+        seo: '',
+        slug: '',
+        svg: '',
+        children: [
+            {
+                name: 'Аксессуары',
+                seo: '',
+                slug: '',
+                svg: '',
+                children: [
+                    {
+                        name: 'Резинки и заколки',
+                        seo: '',
+                        slug: '',
+                        svg: '',
+                    },
+                    {
+                        name: 'Перчатки и рукавицы',
+                        seo: '',
+                        slug: '',
+                        svg: '',
+                    },
+                ],
+            },
+        ],
+    },
 ];

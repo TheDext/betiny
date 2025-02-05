@@ -1,57 +1,25 @@
 //@ts-nocheck
-'use client';
-import classNames from '@/shared/lib/classNames';
-import classes from './catalogList.module.scss';
-import { useClickAway } from 'react-use';
-import { useEffect, useRef, useState } from 'react';
-import useUiActions from '@/store/uiActions';
 import CatalogItem from '@/components/actionBar/components/catalogItem/catalogItem';
+import { X } from 'lucide-react';
+import classes from '@/components/actionBar/components/catalogList/catalogList.module.scss';
 
-const CatalogList = ({ catalog }) => {
-    const [activeCategoryId, setActiveCategoryId] = useState('');
-    console.log('catalog', catalog);
-    const { isOpenCatalog, setOpenCatalog } = useUiActions();
-    const ref = useRef();
-
-    useClickAway(ref, () => {
-        if (isOpenCatalog) {
-            setOpenCatalog(!isOpenCatalog);
-        }
-    });
-
+const CatalogList = ({
+    catalog,
+    setActiveCategoryId,
+    activeCategoryId,
+    setOpenCatalog,
+}) => {
     return (
-        <ul
-            ref={ref}
-            className={classNames(
-                classes.catalogList,
-                { [classes._active]: isOpenCatalog },
-                []
-            )}
-        >
+        <ul className={classes.catalogList}>
             {catalog.map((item, index) => (
-                <CatalogItem key={index} item={item} />
+                <CatalogItem
+                    key={index}
+                    item={item}
+                    setActiveCategoryId={setActiveCategoryId}
+                    activeCategoryId={activeCategoryId}
+                />
             ))}
         </ul>
-
-        // <ul
-        //     ref={ref}
-        //     className={classNames(
-        //         classes.catalogList,
-        //         { [classes._active]: isOpenCatalog },
-        //         []
-        //     )}
-        // >
-        //     <li>Catalog</li>
-        //     {data.map(({ id, name, categories }) => (
-        //         <li
-        //             onMouseEnter={() => setActiveCategoryId(id)}
-        //             onMouseLeave={() => setActiveCategoryId('')}
-        //             key={id}
-        //         >
-        //             {name}
-        //         </li>
-        //     ))}
-        // </ul>
     );
 };
 

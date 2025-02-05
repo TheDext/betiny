@@ -13,7 +13,11 @@ export const Search = () => {
     const { isSearchActive, setSearchActive } = useUiActions();
     const ref = useRef();
 
-    useClickAway(ref, () => setSearchActive(false));
+    useClickAway(ref, () => {
+        if (isSearchActive) {
+            setSearchActive(false);
+        }
+    });
 
     return (
         <div

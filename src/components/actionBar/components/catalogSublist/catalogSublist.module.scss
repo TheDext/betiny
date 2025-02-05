@@ -1,0 +1,11 @@
+.catalogSublist {
+  flex: 1 1 100%;
+  background: #000;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px;
+  //column-gap: 20px;
+  li {
+    flex: 0 1 25%;
+  }
+}

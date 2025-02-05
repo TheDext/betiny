@@ -1,12 +1,14 @@
 //@ts-nocheck
-
-const CatalogItem = ({ item }) => {
+const CatalogItem = ({ item, setActiveCategoryId, childrenlist }) => {
     return (
-        <li>
-            {item.name}
-            {item?.children && (
+        <li onClick={() => !item.parentId && setActiveCategoryId(item.id)}>
+            <div>{item.name}</div>
+
+            {childrenlist && (
                 <ul>
-                    <CatalogItem item={item} />
+                    {childrenlist.map((item, index) => (
+                        <CatalogItem key={index} item={item} />
+                    ))}
                 </ul>
             )}
         </li>

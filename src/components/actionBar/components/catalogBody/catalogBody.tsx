@@ -29,13 +29,6 @@ const CatalogBody = ({ catalog }) => {
                 []
             )}
         >
-            <X
-                onClick={() => {
-                    setActiveCategoryId('');
-                    setOpenCatalog(false);
-                }}
-                className={classes.catalogBody__close}
-            />
             <CatalogList
                 catalog={catalog}
                 setActiveCategoryId={setActiveCategoryId}

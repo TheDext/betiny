@@ -1,7 +1,18 @@
 
 .catalogList {
-    flex: 0 1 auto;
-
     background: #484646;
-    padding: 30px;
+    padding: 50px 30px;
+    position: relative;
+    height: 100%;
+    width: 200px;
+    &__close {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+        &:hover {
+            transform: translate(0, -2px);
+        }
+    }
 }

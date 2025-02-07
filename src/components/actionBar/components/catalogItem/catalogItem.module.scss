@@ -1,3 +1,9 @@
-//.catalogSublist {
-//  outline: 1px solid transparent;
-//}
+.catalogItem {
+  &__name {
+    display: inline-block;
+    cursor: pointer;
+    &:hover  {
+      text-decoration: underline;
+    }
+  }
+}

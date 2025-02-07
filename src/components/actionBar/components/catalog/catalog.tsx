@@ -5,7 +5,7 @@ import { catalogService } from '@/services/catalog.service';
 
 export const Catalog = async () => {
     const { catalog } = await catalogService.get();
-
+    console.log('catalog', catalog);
     return (
         <div className={classes.catalog}>
             <CatalogButton />

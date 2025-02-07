@@ -1,11 +1,18 @@
 .catalogSublist {
-  flex: 1 1 100%;
   background: #000;
+  padding: 50px 30px;
+  position: absolute;
+  top: 0;
+  left: 200px;
+  height: 100%;
+  width: calc(100vw - 200px);
   display: flex;
   flex-wrap: wrap;
-  padding: 30px;
-  //column-gap: 20px;
   li {
     flex: 0 1 25%;
   }
+}
+.catalogSublist > li > div {
+  font-weight: 900;
+  margin-bottom: 10px;
 }

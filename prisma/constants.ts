@@ -10,19 +10,19 @@ export const catalog: Catalog[] = [
     {
         name: 'Новорожденным',
         seo: '',
-        slug: '',
+        slug: 'novorojdennim',
         svg: '',
         children: [
             {
                 name: 'Аксессуары',
                 seo: '',
-                slug: '',
+                slug: 'novorojdennim/akseccuary',
                 svg: '',
                 children: [
                     {
                         name: 'В коляску',
                         seo: '',
-                        slug: '',
+                        slug: 'novorojdennim/akseccuary/v_kolyasku',
                         svg: '',
                     },
                     {

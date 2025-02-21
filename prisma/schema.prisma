@@ -17,3 +17,19 @@ model Catalog {
   parent   Catalog?  @relation("CatalogToCatalog", fields: [parentId], references: [id])
   children Catalog[] @relation("CatalogToCatalog")
 }
+
+model User {
+  id           Int      @id @default(autoincrement())
+  name         String
+  password     String
+  role         Role     @default(USER)
+  isActive     Boolean  @default(true)
+  refreshToken String?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+enum Role {
+  USER
+  ADMIN
+}

@@ -14,7 +14,7 @@ const InputField: FC<TextFieldProps> = ({
     ...props
 }) => {
     const handleChange = ({ target }: React.ChangeEvent<HTMLInputElement>) => {
-        onChange(target.value);
+        onChange(target);
     };
 
     return (
